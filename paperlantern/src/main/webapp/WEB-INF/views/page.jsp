@@ -21,10 +21,17 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Paper Lantern - ${title}</title>
+    
+    <script>
+    window.menu = '${title}';
+    </script>
 
     <!-- Bootstrap Core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Bootstrap Readable Theme -->
+   <link href="${css}/bootsrap-readable-theme.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="${css}/shop-homepage.css" rel="stylesheet">
@@ -40,13 +47,31 @@
 
 <body>
 
+<div class="wrapper">
+
+
           <!-- Navigation -->
  <%@include file="./shared/navbar.jsp" %>
 
     <!-- Page Content -->
+    
+    <div class="content">
+    
+    <c:if test="${userClickHome == true }">
     <%@include file="home.jsp" %>
+</c:if>
 
+<!-- Load when user clicks About -->
+<c:if test="${userClickAbout == true }">
+    <%@include file="about.jsp" %>
+</c:if>
+
+<!-- Load when user clicks Contact -->
+<c:if test="${userClickContact == true }">
+    <%@include file="contact.jsp" %>
+</c:if>
         
+        </div>
 
         <!-- Footer -->
        <%@include file="./shared/footer.jsp" %>
@@ -60,6 +85,11 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="${js}/bootstrap.min.js"></script>
+    
+     <!-- Self coded JavaScript -->
+    <script src="${js}/myapp.js"></script>
+    
+    </div>
 
 </body>
 
