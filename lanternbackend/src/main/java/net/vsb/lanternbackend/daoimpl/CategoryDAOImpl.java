@@ -21,18 +21,37 @@ public class CategoryDAOImpl implements CategoryDAO {
 		category.setId(1);
 		category.setName("Fantasy");
 		category.setDescription("This is the description for fantasy");
-		category.setImageurl("book.jpg");
+		category.setImageurl("book_1.jpg");
 		
 		categories.add(category);
 		
 		
 		//adding second category
+		       category = new Category();
 				category.setId(2);
 				category.setName("Fiction");
-				category.setDescription("This is the description for fantasy");
-				category.setImageurl("book_3.jpg");
+				category.setDescription("This is the description for fiction");
+				category.setImageurl("book_2.jpg");
 				
 				categories.add(category);
+				
+				//adding third category
+			       category = new Category();
+					category.setId(3);
+					category.setName("Comics");
+					category.setDescription("This is the description for Comics");
+					category.setImageurl("book_3.jpg");
+					
+					categories.add(category);
+					
+					//adding fourth category
+				       category = new Category();
+						category.setId(4);
+						category.setName("Biography");
+						category.setDescription("This is the description for Biography");
+						category.setImageurl("book_4.jpg");
+						
+						categories.add(category);
 				
 	
 				
@@ -45,4 +64,17 @@ public class CategoryDAOImpl implements CategoryDAO {
 		return categories;
 	}
 
+	@Override
+	public Category get(int id) {
+		// enhanced for loop
+		for(Category category : categories) {
+			
+			if(category.getId() == id) return category;
+		}
+		
+		return null;
+	}
+
+	
+	
 }
