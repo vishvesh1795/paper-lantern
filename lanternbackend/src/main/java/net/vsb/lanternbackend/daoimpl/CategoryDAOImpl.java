@@ -53,7 +53,14 @@ public class CategoryDAOImpl implements CategoryDAO {
 						
 						categories.add(category);
 				
-	
+						//adding fifth category
+					       category = new Category();
+							category.setId(5);
+							category.setName("Science And Tech");
+							category.setDescription("This is the description for Section a");
+							category.setImageurl("book_4.jpg");
+							
+							categories.add(category);
 				
 				
 	}
