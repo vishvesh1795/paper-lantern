@@ -20,7 +20,7 @@
                         <a href="${contextRoot}/contact">Contact</a>
                     </li>
                     <li id="listproducts">
-                        <a href="${contextRoot}/show/all/products">View Product</a>
+                        <a href="${contextRoot}/show/all/products">Library</a>
                     </li>
                 </ul>
             </div>
@@ -28,3 +28,6 @@
         </div>
         <!-- /.container -->
     </nav>
+    
+  
+	
